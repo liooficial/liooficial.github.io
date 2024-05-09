@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Gris claro */
+    color: #333; /* Gris oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('hearts-galore-an-eye-catching-3d.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el encabezado */
+    background-position: center; /* Centra la imagen */
+    text-align: center; /* Centra el texto */
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 10vw; /* Tamaño grande */
+    color: white; /* Texto blanco */
+    text-shadow: 3px 3px 3px black; /* Sombra negra */
+    padding: 20px; /* Espaciado */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+
+
+
+/* Estilo para el menú */
+nav {
+    background-color: #ffcccc; /* Color de fondo */
+    padding: 10px 0; /* Espaciado interior */
+}
+
+ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra los elementos */
+}
+
+li {
+    display: inline-block; /* Muestra los elementos en línea */
+    margin: 0 10px; /* Espacio entre los elementos */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #333; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    padding: 10px 20px; /* Espaciado interior */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+a:hover {
+    background-color: #fab4b4; /* Cambio de color de fondo al pasar el ratón */
+}
+
+
+
+
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    color: #6699cc; /* Azul pastel */
+    font-size: 50px;
+    text-align: center;
+}
+
+footer {
+    background-color: #ffcccc; /* Rosa pastel */
+    color: #333; /* Gris oscuro */
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+/*fechas*/
+.important-date {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #b2dafa; /* Rosa pastel */
+    transition: transform 0.3s; /* Transición suave */
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    font-size: 50px;
+}
+
+.important-date:hover {
+    transform: scale(.9); /* Agranda el elemento al 110% */
+}
+.fecha1 {
+    font-family: Arial, sans-serif;
+}
+.fecha2 {
+    font-family: "Times New Roman", serif;
+}
+.fecha3 {
+    font-family: "Courier New", monospace;
+}
+.fecha4 {
+    font-family: "Arial Black", sans-serif;
+}
+.fecha5 {
+    font-family: "Georgia", serif;
+}
+.fecha6 {
+    font-family: "Verdana", sans-serif;
+}
+
+
+
+/*imagenes*/
+.carouselIMG {
+    position: relative;
+    width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+}
+
+
+.slides img {
+    width: 100%; /* Reducir el tamaño de las imágenes al 80% */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+    object-fit: cover; /* Ajusta la imagen dentro del espacio disponible manteniendo la relación de aspecto */
+    margin: 10px; /* Agrega un margen alrededor de las imágenes para evitar que se muestren las imágenes de fondo */
+}
+
+.controlButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.controlButton:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+/*estadisticas*/
+.estadisticas {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.estadisticas h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.estadisticas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.estadisticas li {
+    margin-bottom: 5px;
+}
+
+.estadisticas li span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/*musica*/
+
+#carousel {
+    width: 300px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+  }
+  #songList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .songItem {
+    flex: 0 0 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .songItem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .musicControlButton {
+    margin: 5px; /* Ajusta este valor según sea necesario */
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.centrado {
+    width: auto; /* Ancho deseado del div */
+    margin: 0 auto; /* Establece los márgenes automáticos para centrar horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

@@ -165,33 +165,41 @@ footer {
 
 
 /*estadisticas*/
-.estadisticas {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 400px;
+#estadisticas {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.estadisticas h2 {
-    margin-bottom: 10px;
-    color: #333;
+#estadisticas h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
 }
 
-.estadisticas ul {
-    list-style: none;
-    padding: 0;
+#estadisticas ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.estadisticas li {
-    margin-bottom: 5px;
+#estadisticas li {
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
-.estadisticas li span {
-    font-weight: bold;
-    margin-right: 5px;
+#estadisticas li span {
+  font-weight: bold;
+  color: #333;
 }
+
+#estadisticas b {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
 
 /*musica*/
 

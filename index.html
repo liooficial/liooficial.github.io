@@ -5500,119 +5500,119 @@
       </div>
       <style>
         * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
 
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
 
-section {
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
+        section {
+          width: 100%;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
 
-.carousel-container {
-  display: flex;
-  width: 100%;
-  height: auto; /* Permite que el contenido ajuste la altura */
-  justify-content: space-between;
-  margin: 20px 0;
-  flex-wrap: wrap; /* Permite que los elementos se acomoden mejor en pantallas pequeñas */
-}
+        .carousel-container {
+          display: flex;
+          width: 100%;
+          height: auto; /* Permite que el contenido ajuste la altura */
+          justify-content: space-between;
+          margin: 20px 0;
+          flex-wrap: wrap; /* Permite que los elementos se acomoden mejor en pantallas pequeñas */
+        }
 
-.carousel {
-  width: 70%;
-  overflow: hidden;
-  position: relative;
-  min-height: 300px; /* Ajuste para evitar colapsos */
-}
+        .carousel {
+          width: 70%;
+          overflow: hidden;
+          position: relative;
+          min-height: 300px; /* Ajuste para evitar colapsos */
+        }
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease;
-}
+        .carousel-images {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
 
-.carousel img {
-  width: 100%;
-  height: auto; /* Ajusta la altura automáticamente */
-  object-fit: cover;
-  border-radius: 10px;
-}
+        .carousel img {
+          width: 100%;
+          height: auto; /* Ajusta la altura automáticamente */
+          object-fit: cover;
+          border-radius: 10px;
+        }
 
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 24px;
-  z-index: 10;
-}
+        .prev,
+        .next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          cursor: pointer;
+          font-size: 24px;
+          z-index: 10;
+        }
 
-.prev {
-  left: 10px;
-}
+        .prev {
+          left: 10px;
+        }
 
-.next {
-  right: 10px;
-}
+        .next {
+          right: 10px;
+        }
 
-.carousel button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#carousel2 {
-  width: 80%; /* Ajusta el ancho del carrusel */
-  max-width: 800px; /* O un tamaño que prefieras */
-  margin: 0 auto; /* Centra horizontalmente */
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center; /* Asegura que el contenido esté alineado */
-}
+        .carousel button:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        #carousel2 {
+          width: 80%; /* Ajusta el ancho del carrusel */
+          max-width: 800px; /* O un tamaño que prefieras */
+          margin: 0 auto; /* Centra horizontalmente */
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          justify-content: center; /* Asegura que el contenido esté alineado */
+        }
 
-.gaceta {
-  width: 30%;
-  padding: 20px;
-  background: #f4f4f4;
-  text-align: center;
-  min-height: 300px; /* Ajuste mínimo para que no se vea disparejo */
-}
+        .gaceta {
+          width: 30%;
+          padding: 20px;
+          background: #f4f4f4;
+          text-align: center;
+          min-height: 300px; /* Ajuste mínimo para que no se vea disparejo */
+        }
 
-.social-icons a {
-  display: block;
-  margin: 2px 0;
-  text-decoration: none;
-  font-size: 25px;
-}
+        .social-icons a {
+          display: block;
+          margin: 2px 0;
+          text-decoration: none;
+          font-size: 25px;
+        }
 
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-  .carousel-container {
-    flex-direction: column;
-    align-items: center;
-  }
+        /* Ajuste para pantallas pequeñas */
+        @media (max-width: 768px) {
+          .carousel-container {
+            flex-direction: column;
+            align-items: center;
+          }
 
-  .carousel {
-    width: 90%; /* Ajustar el ancho en pantallas pequeñas */
-  }
+          .carousel {
+            width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+          }
 
-  .gaceta {
-    width: 90%; /* Ajustar el ancho de la gaceta en pantallas pequeñas */
-    margin-top: 20px;
-  }
-}
+          .gaceta {
+            width: 90%; /* Ajustar el ancho de la gaceta en pantallas pequeñas */
+            margin-top: 20px;
+          }
+        }
 
         #guia {
           margin-bottom: 10px;
@@ -5684,99 +5684,140 @@ section {
             transform: translateX(0);
           }
         }
-/* Contenedor principal */
-.seccion-especial {
-  display: flex;
-  flex-direction: column; /* Acomoda los elementos en columna */
-  width: 100vw; /* Ocupa todo el ancho */
-  height: 100vh; /* Ocupa toda la pantalla */
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Fondo degradado */
-  padding: 20px;
-  gap: 20px; /* Espacio entre secciones */
-}
 
-/* Estilos generales para .Quejas y .Tarjeta */
-.Quejas,
-.Tarjeta {
-  width: 100%; /* Ocupa todo el ancho */
-  height: 75vh; /* Aumento la altura de la tarjeta */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white; /* Fondo blanco */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones */
-}
+        .Quejas,
+        .Tarjeta {
+          width: 100vw; /* Ocupa todo el ancho de la pantalla */
+          height: 100vh; /* Ocupa todo el alto de la pantalla */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: white; /* Fondo blanco */
+          border-radius: 12px; /* Bordes redondeados */
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+          padding: 20px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones */
+          max-width: 600px; /* Limita el ancho para pantallas grandes */
+          margin: 20px auto; /* Centra las tarjetas */
+        }
 
-/* Efecto de elevación al pasar el mouse */
-.Quejas:hover,
-.Tarjeta:hover {
-  transform: translateY(-5px); /* Efecto de elevación */
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
-}
+        /* Efecto de elevación al pasar el mouse */
+        .Quejas:hover,
+        .Tarjeta:hover {
+          transform: translateY(-5px); /* Efecto de elevación */
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+        }
 
-/* Estilos para la sección de Quejas */
-.Quejas h3,
-.Tarjeta h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
-}
+        /* Estilos para la sección de Quejas */
+        .Quejas h3,
+        .Tarjeta h3 {
+          font-size: 1.5rem;
+          color: #333;
+          margin-bottom: 10px;
+          text-align: center;
+        }
 
-.Quejas textarea {
-  width: 80%;
-  max-width: 500px;
-  height: 120px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 1rem;
-  resize: none;
-  outline: none;
-  transition: border 0.3s ease;
-}
+        .Quejas p,
+        .Tarjeta p {
+          font-size: 1rem;
+          text-align: center;
+        }
 
-/* Efecto cuando el textarea está activo */
-.Quejas textarea:focus {
-  border-color: #772537; /* Color más llamativo */
-}
+        .Quejas textarea {
+          width: 100%;
+          max-width: 500px;
+          height: 120px;
+          border: 2px solid #ccc;
+          border-radius: 8px;
+          padding: 10px;
+          font-size: 1rem;
+          resize: none;
+          outline: none;
+          transition: border 0.3s ease;
+          margin-bottom: 15px;
+        }
 
-/* Botón con mejor diseño */
-button {
-  background: #772537;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 15px;
-}
+        /* Efecto cuando el textarea está activo */
+        .Quejas textarea:focus {
+          border-color: #772537; /* Color más llamativo */
+        }
 
-/* Efecto hover en botón */
-button:hover {
-  background: #a03a52;
-}
+        /* Botón con mejor diseño */
+        button {
+          background: #772537;
+          color: white;
+          font-size: 1rem;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+          margin-top: 15px;
+        }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .seccion-especial {
-    height: auto; /* Permite ajustar la altura automáticamente */
-  }
+        /* Efecto hover en botón */
+        button:hover {
+          background: #a03a52;
+        }
 
-  .Quejas,
-  .Tarjeta {
-    height: auto; /* Ajuste automático */
-    padding: 30px;
-  }
-}
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 768px) {
+          .Quejas,
+          .Tarjeta {
+            padding: 15px; /* Reduce el padding en pantallas pequeñas */
+            width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+          }
 
+          .Quejas textarea {
+            width: 90%; /* Ajusta el ancho del textarea */
+          }
 
-</style>
+          .flip-card {
+            width: 100%; /* Asegura que la tarjeta también se ajuste */
+          }
+        }
+
+        /* Estilos para la flip-card */
+        .flip-card {
+          width: 100%;
+          perspective: 1000px; /* Establece la perspectiva para el efecto de voltear */
+        }
+
+        .flip-card-inner {
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transition: transform 0.6s;
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg); /* Efecto de giro */
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .flip-card-back {
+          background: #f5f5f5;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
       <section>
         <div class="carousel-container">
           <div class="carousel" id="carousel1">
@@ -5825,26 +5866,43 @@ button:hover {
         </div>
       </section>
       <script>
-        const carouselInner = document.querySelector(".carousel-inner");
-        const items = document.querySelectorAll(".carousel-item");
-        const itemCount = items.length;
+        document.addEventListener("DOMContentLoaded", () => {
+          const carousels = document.querySelectorAll(".carousel");
+          carousels.forEach((carousel) => {
+            let currentIndex = 0;
+            const images = carousel.querySelectorAll(".carousel-images img");
+            const totalImages = images.length;
+            const imageContainer = carousel.querySelector(".carousel-images");
 
-        // Ajustar el ancho dinámicamente
-        carouselInner.style.width = `${itemCount * 100}%`;
+            function moveSlide(direction) {
+              currentIndex += direction;
 
-        // Crear los keyframes de forma dinámica
-        let keyframes = "@keyframes slide {";
-        for (let i = 0; i < itemCount; i++) {
-          const percentage = (i / itemCount) * 100;
-          const move = -(i * 70) + "vw";
-          keyframes += `${percentage}% { transform: translateX(${move}); }`;
-        }
-        keyframes += "100% { transform: translateX(0); }}";
+              if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+              } else if (currentIndex >= totalImages) {
+                currentIndex = 0;
+              }
 
-        // Agregar los keyframes al CSS
-        const styleSheet = document.createElement("style");
-        styleSheet.innerHTML = keyframes;
-        document.head.appendChild(styleSheet);
+              imageContainer.style.transform = `translateX(-${
+                currentIndex * 100
+              }%)`;
+            }
+
+            // Botones de navegación
+            const prevButton = carousel.querySelector(".prev");
+            const nextButton = carousel.querySelector(".next");
+
+            if (prevButton && nextButton) {
+              prevButton.addEventListener("click", () => moveSlide(-1));
+              nextButton.addEventListener("click", () => moveSlide(1));
+            }
+
+            // Auto Slide cada 4 segundos
+            setInterval(() => {
+              moveSlide(1);
+            }, 4000);
+          });
+        });
       </script>
       <section>
         <div class="guias">
@@ -5869,7 +5927,7 @@ button:hover {
           </div>
         </div>
       </section>
-      <br>
+      <br />
       <div class="carousel" id="carousel2">
         <div class="carousel-images">
           <img src="1.png" alt="Imagen 1" />
@@ -5885,173 +5943,189 @@ button:hover {
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
-      <section>
-        <div class="seccion-especial">
-          <div class="Tarjeta">
-            <h3>Tarjeta Virtual</h3>
-            <br />
-            <h6>
-              si vas a viajar a tulancingo utiliza nuestra tarjeta de descuentos
-            </h6>
-            <p>Solicita tu tarjeta virtual y obtén descuentos exclusivos.</p>
-            <style>
-              .flip-card {
-                background-color: transparent;
-                width: 240px;
-                height: 154px;
-                perspective: 1000px;
-                color: white;
-              }
 
-              .heading_8264 {
-                position: absolute;
-                letter-spacing: 0.2em;
-                font-size: 0.6em;
-                top: 2em;
-                left: 5em;
-              }
-              .flip-card img {
-                position: absolute;
-                bottom: 10px;
-                right: 5px;
-                width: 100px; /* Ajusta el tamaño según sea necesario */
-                height: auto;
-              }
-              .number {
-                position: absolute;
-                font-weight: bold;
-                font-size: 0.6em;
-                top: 9em;
-                left: 1.6em;
-              }
-              .valid_thru {
-                position: absolute;
-                font-weight: bold;
-                top: 635.8em;
-                font-size: 0.01em;
-                left: 140.3em;
-              }
-
-              .date_8264 {
-                position: absolute;
-                font-weight: bold;
-                font-size: 0.5em;
-                top: 13.6em;
-                left: 2.2em;
-              }
-              .name {
-                position: absolute;
-                font-weight: bold;
-                font-size: 0.5em;
-                top: 16.1em;
-                left: 2em;
-              }
-              .strip {
-                position: absolute;
-                background-color: #772537;
-                width: 15em;
-                height: 1.5em;
-                top: 2.4em;
-                background: repeating-linear-gradient(
-                  45deg,
-                  #303030,
-                  #303030 10px,
-                  #202020 10px,
-                  #202020 20px
-                );
-              }
-              .mstrip {
-                position: absolute;
-                background-color: rgb(255, 255, 255);
-                width: 8em;
-                height: 0.8em;
-                top: 5em;
-                left: 0.8em;
-                border-radius: 2.5px;
-              }
-              .sstrip {
-                position: absolute;
-                background-color: rgb(255, 255, 255);
-                width: 4.1em;
-                height: 0.8em;
-                top: 5em;
-                left: 10em;
-                border-radius: 2.5px;
-              }
-              .flip-card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-              }
-              .flip-card:hover .flip-card-inner {
-                transform: rotateY(180deg);
-              }
-              .flip-card-front,
-              .flip-card-back {
-                box-shadow: 0 8px 14px 0 #772537;
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                border-radius: 1rem;
-              }
-              .flip-card-front {
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px,
-                  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-                  rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
-                background-color: #772537;
-              }
-              .flip-card-back {
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px,
-                  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-                  rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
-                background-color: #772537;
-                transform: rotateY(180deg);
-              }
-            </style>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <p class="heading_8264">Targeta de descuentos TDTU</p>
-                  <img src="logo.jpg" alt="Imagen 6" />
-                  <p class="number">FOLIO</p>
-                  <p class="date_8264">2025 0000 0001</p>
-                  <p class="name">TULANCINGO</p>
-                </div>
-                <div class="flip-card-back">
-                  <div class="strip"><p>Tarjeta del Turista</p></div>
-                  <div class="mstrip"></div>
-                  <img src="LOGO-removebg-preview.png" alt="Imagen 4" />
-                  <div class="sstrip"></div>
-                  <p class="heading_8264">Dirección de Turismo</p>
-                </div>
-              </div>
+      <div class="Tarjeta">
+        <h3>Tarjeta Virtual</h3>
+        <br />
+        <h6>
+          si vas a viajar a tulancingo utiliza nuestra tarjeta de descuentos
+        </h6>
+        <p>Solicita tu tarjeta virtual y obtén descuentos exclusivos.</p>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p class="heading_8264">Tarjeta de descuentos TDTU</p>
+              <img src="logo.jpg" alt="Imagen 6" />
+              <p class="number">FOLIO</p>
+              <p class="date_8264">2025 0000 0001</p>
+              <p class="name">TULANCINGO</p>
             </div>
-            <br />
-            <button>Solicitar</button>
-          </div>
-          <div class="Quejas">
-            <h3>Quejas y Sugerencias</h3>
-            <p>Déjanos tu opinión sobre nuestros servicios.</p>
-            <textarea
-              rows="4"
-              cols="40"
-              placeholder="Escribe aquí..."
-            ></textarea>
-            <p>Déjanos tu opinión sobre nuestros servicios.</p>
-
-            <button>Enviar</button>
+            <div class="flip-card-back">
+              <div class="strip"><p>Tarjeta del Turista</p></div>
+              <div class="mstrip"></div>
+              <img src="LOGO-removebg-preview.png" alt="Imagen 4" />
+              <div class="sstrip"></div>
+              <p class="heading_8264">Dirección de Turismo</p>
+            </div>
           </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br>
-      </section>
+        <br />
+        <button>Solicitar</button>
+      </div>
+      <style>
+        .flip-card {
+          background-color: transparent;
+          width: clamp(280px, 50vw, 500px); /* Se ajusta entre 280px y 500px */
+          height: clamp(180px, 30vw, 320px);
+          max-width: 100%;
+          max-height: 100%;
+          perspective: 1000px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* Ajuste dinámico en pantallas grandes */
+        @media (min-width: 1024px) {
+          .flip-card {
+            width: 500px;
+            height: 320px;
+          }
+        }
+
+        .heading_8264 {
+          position: absolute;
+          letter-spacing: 0.2em;
+          font-size: clamp(0.8em, 2vw, 1.5em);
+          top: 8%;
+          left: 15%;
+        }
+
+        .flip-card img {
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+          width: 25%;
+          height: auto;
+        }
+
+        .number {
+          position: absolute;
+          font-weight: bold;
+          font-size: clamp(0.9em, 2.5vw, 1.5em);
+          top: 40%;
+          left: 10%;
+        }
+
+        .valid_thru {
+          position: absolute;
+          font-weight: bold;
+          font-size: clamp(0.8em, 2vw, 1.2em);
+          top: 55%;
+          left: 60%;
+        }
+
+        .date_8264 {
+          position: absolute;
+          font-weight: bold;
+          font-size: clamp(0.8em, 2vw, 1.2em);
+          top: 60%;
+          left: 12%;
+        }
+
+        .name {
+          position: absolute;
+          font-weight: bold;
+          font-size: clamp(0.9em, 2.5vw, 1.5em);
+          top: 75%;
+          left: 12%;
+        }
+
+        .strip {
+          position: absolute;
+          background-color: #772537;
+          width: 80%;
+          height: 8%;
+          top: 10%;
+          background: repeating-linear-gradient(
+            45deg,
+            #303030,
+            #303030 10px,
+            #202020 10px,
+            #202020 20px
+          );
+        }
+
+        .mstrip {
+          position: absolute;
+          background-color: white;
+          width: 30%;
+          height: 5%;
+          top: 22%;
+          left: 5%;
+          border-radius: 2.5px;
+        }
+
+        .sstrip {
+          position: absolute;
+          background-color: white;
+          width: 15%;
+          height: 5%;
+          top: 22%;
+          left: 55%;
+          border-radius: 2.5px;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+          box-shadow: 0 8px 14px 0 #772537;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          border-radius: 1rem;
+        }
+
+        .flip-card-front {
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+            rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+          background-color: #772537;
+        }
+
+        .flip-card-back {
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+            rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+          background-color: #772537;
+          transform: rotateY(180deg);
+        }
+      </style>
+      <div class="Quejas">
+        <h3>Quejas y Sugerencias</h3>
+        <p>Déjanos tu opinión sobre nuestros servicios.</p>
+        <textarea rows="4" cols="40" placeholder="Escribe aquí..."></textarea>
+        <p>Déjanos tu opinión sobre nuestros servicios.</p>
+        <button>Enviar</button>
+      </div>
       <style>
         .card {
           padding: 30px;
@@ -6135,31 +6209,6 @@ button:hover {
           </div>
         </div>
       </div>
-      <script>
-        let currentIndex = 0;
-  const carousel = document.querySelector(".carousel-inner");
-  const images = document.querySelectorAll(".carousel-item");
-  const totalImages = images.length;
-
-  function moveSlide(direction) {
-    const imageWidth = images[0].offsetWidth;
-
-    currentIndex += direction;
-
-    if (currentIndex < 0) {
-      currentIndex = totalImages - 1;
-    } else if (currentIndex >= totalImages) {
-      currentIndex = 0;
-    }
-
-    carousel.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-  }
-
-  // 🚀 Auto Slide cada 4 segundos
-  setInterval(() => {
-    moveSlide(1);
-  }, 4000);
-      </script>
       <script>
         // Obtener el número de visitas desde el localStorage
         let visits = localStorage.getItem("visitCount") || 0;

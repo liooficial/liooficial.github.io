@@ -5965,7 +5965,7 @@
               <div class="mstrip"></div>
               <img src="LOGO-removebg-preview.png" alt="Imagen 4" />
               <div class="sstrip"></div>
-              <p class="heading_8264">Dirección de Turismo</p>
+              <p class="heading_8264">      Dirección de Turismo</p>
             </div>
           </div>
         </div>
@@ -6006,7 +6006,7 @@
           position: absolute;
           bottom: 5%;
           right: 5%;
-          width: 25%;
+          width: 35%;
           height: auto;
         }
 
@@ -6046,8 +6046,8 @@
           position: absolute;
           background-color: #772537;
           width: 80%;
-          height: 8%;
-          top: 10%;
+          height: 15%;
+          top: 20%;
           background: repeating-linear-gradient(
             45deg,
             #303030,
@@ -6061,8 +6061,8 @@
           position: absolute;
           background-color: white;
           width: 30%;
-          height: 5%;
-          top: 22%;
+          height: 10%;
+          top: 45%;
           left: 5%;
           border-radius: 2.5px;
         }
@@ -6070,12 +6070,35 @@
         .sstrip {
           position: absolute;
           background-color: white;
-          width: 15%;
-          height: 5%;
-          top: 22%;
+          width:30%;
+          height: 10%;
+          top: 45%;
           left: 55%;
           border-radius: 2.5px;
         }
+        .strip {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 5vw; /* Tamaño de letra más grande */
+    transition: all 0.3s ease;
+  }
+        .strip p {
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .strip {
+      font-size: 5vw; /* Aumenta el tamaño de la fuente en pantallas pequeñas */
+    }
+  }
+        
 
         .flip-card-inner {
           position: relative;

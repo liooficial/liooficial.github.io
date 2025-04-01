@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GastroFinder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+      <input type="text" id="searchBar" placeholder="Buscar restaurante..." />
+    </header>
+
+    <section id="filters">
+      <h2>Filtros</h2>
+      <h3>Costo</h3>
+      <select id="cost">
+        <option value="todos">Todos</option>
+        <option value="bajo">Bajo</option>
+        <option value="medio">Medio</option>
+        <option value="alto">Alto</option>
+      </select>
+      <h3>Tipo de comida</h3>
+      <select id="type">
+        <option value="todos">Todos</option>
+        <option value="mexicana">Mexicana</option>
+        <option value="italiana">Italiana</option>
+        <option value="Marisco">Asiática</option>
+      </select>
+      <h3>Descuento</h3>
+      <select id="discount">
+        <option value="todos">Todos</option>
+        <option value="5%">5%</option>
+        <option value="10%">10%</option>
+        <option value="15%">15%</option>
+        <option value="Especial">Especial</option>
+      </select>
+    </section>
+
+    <section id="restaurants">
+      <h2>Restaurantes</h2>
+      <!-- Aquí se agregarán los restaurantes con JavaScript -->
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #772537;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #searchBar {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    #filters {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #filters select {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+    }
+
+    #restaurants {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+      ); /* Ajusta automáticamente las columnas */
+      gap: 20px; /* Espacio entre los elementos */
+    }
+
+    #restaurants h2 {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .restaurant {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .restaurant-img {
+      width: 100%; /* La imagen tomará todo el ancho del contenedor */
+      height: auto; /* La altura se ajustará proporcionalmente */
+      max-width: 100%; /* Nunca será más ancha que su contenedor */
+      max-height: 200px; /* Limitar la altura máxima, puedes ajustar el valor según tus necesidades */
+      object-fit: cover; /* Mantiene la proporción sin deformar la imagen */
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    a button {
+      background-color: #772537; /* Color del botón */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: auto; /* Asegura que el botón esté al final del contenedor */
+      display: block;
+      width: 100%; /* El botón toma el 100% del ancho del contenedor */
+      text-align: center;
+    }
+
+    a button:hover {
+      background-color: #9e2a47; /* Color de fondo al pasar el ratón */
+    }
+  </style>
+  <script>
+    document
+      .getElementById("searchBar")
+      .addEventListener("input", filterRestaurants);
+    document
+      .getElementById("cost")
+      .addEventListener("change", filterRestaurants);
+    document
+      .getElementById("type")
+      .addEventListener("change", filterRestaurants);
+    document
+      .getElementById("discount")
+      .addEventListener("change", filterRestaurants);
+
+    const restaurants = [
+      {
+        name: "Los Globos",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/Logo Los Globos.png",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+      },
+      {
+        name: "los pinos",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/lospinos.jpeg",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+      },
+      {
+        name: "tres craneos",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/tres craneos.jpeg",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+      },
+      {
+        name: "rueda de madera",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/rueda de madera.jpg",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+      },
+      {
+        name: "la casa del guajolote",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/la casa del guajolote.jpeg",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+      },
+      {
+        name: "donde siempre",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/donde_siempre.png",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+      },
+    ];
+
+    function filterRestaurants() {
+      const search = document.getElementById("searchBar").value.toLowerCase();
+      const cost = document.getElementById("cost").value;
+      const type = document.getElementById("type").value;
+      const discount = document.getElementById("discount").value;
+
+      const filtered = restaurants.filter((restaurant) => {
+        return (
+          restaurant.name.toLowerCase().includes(search) &&
+          (cost === "todos" || restaurant.cost === cost) &&
+          (type === "todos" || restaurant.type === type) &&
+          (discount === "todos" || restaurant.discount === discount)
+        );
+      });
+
+      displayRestaurants(filtered);
+    }
+
+    function displayRestaurants(filteredRestaurants) {
+      const restaurantsSection = document.getElementById("restaurants");
+      restaurantsSection.innerHTML = "";
+
+      filteredRestaurants.forEach((restaurant) => {
+        const div = document.createElement("div");
+        div.classList.add("restaurant");
+        div.innerHTML = `
+            <h3>${restaurant.name}</h3>
+            <img src="${restaurant.image}" alt="${restaurant.name}" class="restaurant-img">
+            <p>Tipo: ${restaurant.type}</p>
+            <p>Costo: ${restaurant.cost}</p>
+            <p>Descuento: ${restaurant.discount}</p>
+            <p>Horarios: ${restaurant.Horarios}</p>
+            <a href="${restaurant.ubicacion}" target="_blank">
+                <button>Ver ubicación</button>
+            </a>
+        `;
+        restaurantsSection.appendChild(div);
+      });
+    }
+
+    filterRestaurants(); // Para mostrar todos los restaurantes al cargar la página
+  </script>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+      <input type="text" id="searchBar" placeholder="Buscar restaurante..." />
+    </header>
+
+    <section id="filters">
+      <h2>Filtros</h2>
+      <h3>Costo</h3>
+      <select id="cost">
+        <option value="todos">Todos</option>
+        <option value="Menos de 150$">Menos de 150$</option>
+        <option value="150$ a 300$">150$ a 300$</option>
+        <option value="300$ a 500$">300$ a 500$</option>
+        <option value="Mas de 500$">Mas de 500$</option>
+      </select>
+      <h3>Tipo de comida</h3>
+      <select id="type">
+        <option value="todos">Todos</option>
+        <option value="mexicana">Mexicana</option>
+        <option value="italiana">Italiana</option>
+        <option value="Marisco">Asiática</option>
+      </select>
+      <h3>Descuento</h3>
+      <select id="discount">
+        <option value="todos">Todos</option>
+        <option value="5%">5%</option>
+        <option value="10%">10%</option>
+        <option value="15%">15%</option>
+        <option value="Especial">Especial</option>
+      </select>
+    </section>
+
+    <section id="restaurants">
+      <h2>Restaurantes</h2>
+      <!-- Aquí se agregarán los restaurantes con JavaScript -->
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #772537;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #searchBar {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    #filters {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #filters select {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+    }
+
+    #restaurants {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+      ); /* Ajusta automáticamente las columnas */
+      gap: 20px; /* Espacio entre los elementos */
+    }
+
+    #restaurants h2 {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .restaurant {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Distribuye el contenido */
+      height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    .restaurant p {
+      flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
+    }
+
+    .restaurant-img {
+      width: 100%; /* La imagen tomará todo el ancho del contenedor */
+      height: auto; /* La altura se ajustará proporcionalmente */
+      max-width: 100%; /* Nunca será más ancha que su contenedor */
+      max-height: 200px; /* Limitar la altura máxima, puedes ajustar el valor según tus necesidades */
+      object-fit: cover; /* Mantiene la proporción sin deformar la imagen */
+      margin-top: 10px;
+      border-radius: 5px;
+      object-fit: contain; /* Muestra la imagen completa sin recortes */
+    }
+    a {
+      text-decoration: none; /* Elimina el subrayado de los enlaces */
+      display: block; /* Hace que el enlace ocupe todo el ancho */
+      width: 100%;
+    }
+    a button {
+      background-color: #772537;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%; /* Hace que el botón ocupe todo el ancho */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    }
+
+    a button:hover {
+      background-color: #9e2a47; /* Color de fondo al pasar el ratón */
+    }
+  </style>
+  <script>
+    document
+      .getElementById("searchBar")
+      .addEventListener("input", filterRestaurants);
+    document
+      .getElementById("cost")
+      .addEventListener("change", filterRestaurants);
+    document
+      .getElementById("type")
+      .addEventListener("change", filterRestaurants);
+    document
+      .getElementById("discount")
+      .addEventListener("change", filterRestaurants);
+
+    const restaurants = [
+      {
+        name: "Los Globos",
+        cost: "300$ a 500$",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/Logo Los Globos.png",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+        condicion: " ",
+      },
+      {
+        name: "Los Pinos MangiBone",
+        cost: "Medio",
+        type: "Quesos",
+        discount: "10%",
+        image: "logos-restaurantes/lospinos.jpeg",
+        Horarios: "Lunes a sábado de 8am a 7pm domingo de 8am a 3pm",
+        ubicacion: "https://maps.app.goo.gl/wzoGZ9kSDCwNjFm88",
+        condicion:
+          "La compra mínima para aplicar el descuento es de 250 incluye quesos",
+      },
+      {
+        name: "Tres craneos",
+        cost: "medio",
+        type: "Hamburguesas Gourmet",
+        discount: "15%",
+        image: "logos-restaurantes/tres craneos.jpeg",
+        Horarios: "De miércoles a domingo de 3 pm a 10 pm",
+        ubicacion: "https://maps.app.goo.gl/oHd74k7i7Z2PjN2t7",
+        condicion: "el consumo mínimo por mesa supere los $250",
+      },
+      {
+        name: "rueda de madera",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/rueda de madera.jpg",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+        condicion: "el consumo mínimo por mesa supere los $250",
+      },
+      {
+        name: "la casa del guajolote",
+        cost: "medio",
+        type: "Marisco",
+        discount: "5%",
+        image: "logos-restaurantes/la casa del guajolote.jpeg",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "https://maps.app.goo.gl/vFsXp91ESEDBGQy98",
+        condicion: "el consumo mínimo por mesa supere los $250",
+      },
+      {
+        name: "donde siempre",
+        cost: "medio",
+        type: "Marisco",
+        discount: "10%",
+        image: "logos-restaurantes/donde_siempre.png",
+        Horarios: "De 12:00 a 7:00 pm Todos Los dias se atiende",
+        ubicacion: "Toma una foto de tu visita de hoy súbela etiquétanos",
+        condicion: "Toma una foto de tu visita de hoy súbela etiquétanos",
+      },
+    ];
+
+    function filterRestaurants() {
+      const search = document.getElementById("searchBar").value.toLowerCase();
+      const cost = document.getElementById("cost").value;
+      const type = document.getElementById("type").value;
+      const discount = document.getElementById("discount").value;
+
+      const filtered = restaurants.filter((restaurant) => {
+        return (
+          restaurant.name.toLowerCase().includes(search) &&
+          (cost === "todos" || restaurant.cost === cost) &&
+          (type === "todos" || restaurant.type === type) &&
+          (discount === "todos" || restaurant.discount === discount)
+        );
+      });
+
+      displayRestaurants(filtered);
+    }
+
+    function displayRestaurants(filteredRestaurants) {
+      const restaurantsSection = document.getElementById("restaurants");
+      restaurantsSection.innerHTML = "";
+
+      filteredRestaurants.forEach((restaurant) => {
+        const div = document.createElement("div");
+        div.classList.add("restaurant");
+        div.innerHTML = `
+            <h3>${restaurant.name}</h3>
+            <img src="${restaurant.image}" alt="${restaurant.name}" class="restaurant-img">
+            <p>Tipo: ${restaurant.type}</p>
+            <p>Costo: ${restaurant.cost}</p>
+            <p>Descuento: ${restaurant.discount}</p>
+            <p>Horarios: <br>${restaurant.Horarios}</p>
+            <p>Condicion del descuento: <br> presentar tarjeta digital <BR>${restaurant.condicion}</p>
+            <a href="${restaurant.ubicacion}" target="_blank">
+                <button>Ver ubicación</button>
+            </a>
+        `;
+        restaurantsSection.appendChild(div);
+      });
+    }
+
+    filterRestaurants(); // Para mostrar todos los restaurantes al cargar la página
+  </script>
+</html>

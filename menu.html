@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turismo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      /* --- NAVBAR --- */
+      nav {
+        background-color: #772537;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        transition: background 0.3s;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        position: relative;
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out,
+          transform 0.2s;
+      }
+
+      /* Efecto hover */
+      nav ul li a:hover {
+        background-color: #993858; /* Color de fondo al pasar el mouse */
+        color: #bc955c; /* Cambia a dorado */
+        transform: scale(1.1); /* Efecto de agrandamiento ligero */
+        box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.6);
+      }
+
+      /* Efecto de subrayado animado */
+      nav ul li a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: #bc955c; /* Línea dorada */
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.3s ease-in-out;
+      }
+
+      nav ul li a:hover::after {
+        width: 100%; /* La línea se extiende al 100% al hacer hover */
+      }
+
+      /* Estilo cuando el enlace está activo */
+      nav ul li a.active {
+        background-color: #993858;
+        color: #bc955c;
+        border-radius: 5px;
+      }
+
+      /* --- IMAGEN DE FONDO (PARALLAX) --- */
+      .hero {
+        background-color: #310811c4;
+        background-image: url("https://tulancingo.gob.mx/wp-content/uploads/2025/01/Boletin365-scaled.jpg");
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      /* --- SECCIONES --- */
+
+      /* --- FOOTER --- */
+      footer {
+        background-color: #772537;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 50px;
+        width: 100%;
+      }
+
+      .footer-content {
+        max-width: 800px;
+        margin: auto;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-content a {
+        color: #bc955c; /* Color dorado para destacar */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+      }
+
+      .footer-content a:hover {
+        color: #ffffff; /* Se vuelve blanco al pasar el mouse */
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+      }
+
+      .footer-content p {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="Sitios.HTML">Sitios turísticos</a></li>
+        <li><a href="EVENTO.HTML">Eventos y actividades</a></li>
+        <li><a href="Guías.HTML">Guías turísticas</a></li>
+      </ul>
+    </nav>
+
+    <!-- IMAGEN PARALLAX -->
+    <div class="hero" id="inicio">Conoce, vive y distruta de Tulancingo</div>
+
+    <script>
+      // Detecta la sección en pantalla y cambia la clase "active" en el menú
+      window.addEventListener("scroll", function () {
+        let sections = document.querySelectorAll(".section");
+        let navLinks = document.querySelectorAll("nav ul li a");
+
+        sections.forEach((section, index) => {
+          let top = window.scrollY;
+          let offset = section.offsetTop - 100;
+          let height = section.offsetHeight;
+
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach((link) => link.classList.remove("active"));
+            navLinks[index + 1].classList.add("active"); // +1 porque el primer elemento es "Inicio"
+          }
+        });
+
+        // Si vuelve arriba, activa "Inicio"
+        if (window.scrollY === 0) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          navLinks[0].classList.add("active");
+        }
+      });
+    </script>
+  </body>
+  <footer>
+    <div class="footer-content">
+      <p>
+        Blvd. Nuevo San Nicolás, S/N Fracc. Nuevo San Nicolás CP 43640
+        Tulancingo de Bravo Hidalgo<br />Contacto:
+        <a href="tel:7757558450">(775) 75 584 50 </a>
+      </p>
+      <p>Copyright © 2024 Gobierno Municipal de Tulancingo de Bravo Hidalgo.</p>
+      <p>
+        <a href="https://tulancingo.gob.mx/aviso-de-privacidad/"
+          >Aviso de privacidad</a
+        >
+      </p>
+    </div>
+  </footer>
+</html>
